@@ -11,6 +11,10 @@ app.get('/', function (req, res) {
     res.send('Hello World!');
 });
 
+app.use(function (req, res, next) {
+    res.status(404).send("Sorry, can't find that!");
+})
+
 app.listen(3000, function () {
     console.log('Server started, listening on port 3000.');
 });
