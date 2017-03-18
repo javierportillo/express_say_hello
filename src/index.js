@@ -22,7 +22,11 @@ app.use(function (req, res) {
     res.status(404).send("Sorry, can't find that!");
 });
 
-app.use(function (err, req, res) {
+app.use(function (err, req, res, next) {
+    if (res.headersSent) {
+        return next(err);
+    }
+
     console.error(err.stack);
     res.status(500).send('Sorry, something went wrong.');
 });
