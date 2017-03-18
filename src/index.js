@@ -5,10 +5,17 @@ const app = express();
 
 const APP_ROOT = path.dirname(__dirname);
 
+app.set('views', path.join(APP_ROOT, 'views'));
+app.set('view engine', 'pug');
+
 app.use('/static', express.static(path.join(APP_ROOT, 'public')));
 
 app.get('/', function (req, res) {
-    res.send('Hello World!');
+    res.render('home', {
+        title: 'Hey',
+        message: 'Hello There!',
+        fruits: ['Banana', 'Watermelon', 'Strawberry']
+    });
 });
 
 app.use(function (req, res, next) {
