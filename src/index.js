@@ -18,11 +18,11 @@ app.get('/', function (req, res) {
     });
 });
 
-app.use(function (req, res, next) {
+app.use(function (req, res) {
     res.status(404).send("Sorry, can't find that!");
-})
+});
 
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
     console.error(err.stack);
     res.status(500).send('Sorry, something went wrong.');
 });
