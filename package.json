@@ -1,0 +1,22 @@
+{
+  "name": "express_say_hello",
+  "version": "0.0.0",
+  "description": "My first Node.js + Express.js web server",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javierportillo/express_say_hello.git"
+  },
+  "author": "Javier Portillo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javierportillo/express_say_hello/issues"
+  },
+  "homepage": "https://github.com/javierportillo/express_say_hello#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
