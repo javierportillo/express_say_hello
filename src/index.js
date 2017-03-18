@@ -5,6 +5,8 @@ const app = express();
 
 const APP_ROOT = path.dirname(__dirname);
 
+app.use('/static', express.static(path.join(APP_ROOT, 'public')));
+
 app.get('/', function (req, res) {
     res.send('Hello World!');
 });
